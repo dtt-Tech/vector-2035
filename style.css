@@ -1,6 +1,6 @@
-/* --- ФОН НА ВЕСЬ ЭКРАН --- */
+/* Фон на весь экран */
 [data-testid="stAppViewContainer"] {
-    /* Градиент делает картинку чуть светлее, чтобы текст хорошо читался */
+    /* Накладываем белый градиент чтобы картинка не мешала читать текст */
     background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), 
                       url('https://i.oneme.ru/i?r=B09HQN0Qr3SEKX3_pN0HADcfQ0jk7f5D27j4vU0aH1DkGFyXRi8WtLzdX6gWZreCFdMO5n_e63-9DMfNUhYw4jvrCcMFcD_sTbWvmSrsvr4&expires=1793453311303') !important;
     background-size: cover !important;
@@ -9,12 +9,12 @@
     background-attachment: fixed !important;
 }
 
-/* Прозрачная верхняя панель */
+/* Делаем верхнюю панель прозрачной */
 [data-testid="stHeader"] {
     background-color: transparent !important;
 }
 
-/* --- ОСНОВНОЙ БЛОК --- */
+/* Наш главный белый блок по центру */
 .block-container {
     max-width: 1120px !important;
     margin-left: auto !important;
@@ -22,16 +22,16 @@
     padding-top: 2.5rem !important;
     padding-bottom: 4rem !important;
     
-    /* Возвращаем полупрозрачный белый фон */
+    /* Закругляем углы и добавляем тень */
     background-color: rgba(255, 255, 255, 0.85) !important; 
     border-radius: 20px;
     margin-top: 2rem;
     margin-bottom: 2rem;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px); /* Эффект размытия фона под блоком */
+    backdrop-filter: blur(10px); /* Размытие фона под блоком */
 }
 
-/* Убираем скругления и отступы на мобильных устройствах, чтобы блок был на весь экран */
+/* На телефонах растягиваем блок на весь экран */
 @media (max-width: 768px) {
     .block-container {
         border-radius: 0;
@@ -40,9 +40,10 @@
     }
 }
 
+/* Красивые заголовки */
 h1, h2, h3 { color: #1f2937; letter-spacing: -0.01em; }
 
-/* --- Кнопки --- */
+/* Кнопки */
 .stButton > button {
     border-radius: 10px;
     font-weight: 500;
@@ -65,17 +66,17 @@ h1, h2, h3 { color: #1f2937; letter-spacing: -0.01em; }
     box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
 }
 
-/* --- Карточки (containers) --- */
+/* Карточки с информацией */
 div[data-testid="stVerticalBlockBorderWrapper"] {
     border-radius: 12px !important;
     border: 1px solid #e5e7eb !important;
-    /* Полупрозрачный белый фон карточек для эффекта стекла */
+    /* Делаем карточки полупрозрачными */
     background: rgba(255, 255, 255, 0.85) !important; 
     padding: 1rem;
     backdrop-filter: blur(5px);
 }
 
-/* --- Навигация (Radio в виде пилюль) --- */
+/* Меню сверху превращаем в красивые кнопочки */
 div[data-testid="stRadio"] > div[role="radiogroup"] {
     display: flex !important;
     flex-wrap: wrap !important;
@@ -94,18 +95,18 @@ div[data-testid="stRadio"] label {
     transition: all 0.2s ease !important;
     cursor: pointer;
 }
-/* Прячем стандартный кружок */
+/* Убираем стандартный кружок у переключателя */
 div[data-testid="stRadio"] label > div:first-child {
     display: none !important; 
 }
-/* Текст неактивной вкладки */
+/* Как выглядит невыбранная вкладка */
 div[data-testid="stRadio"] label p {
     color: #4b5563 !important;
     font-size: 14px !important;
     font-weight: 500 !important;
     margin: 0 !important;
 }
-/* Активная вкладка */
+/* Как выглядит выбранная вкладка */
 div[data-testid="stRadio"] label:has(input:checked) {
     background: #ffffff !important;
     box-shadow: 0 1px 3px rgba(0,0,0,0.15) !important;
@@ -115,18 +116,16 @@ div[data-testid="stRadio"] label:has(input:checked) p {
     font-weight: 600 !important;
 }
 
-/* --- Уведомления st.info --- */
+/* Синие уведомления */
 div[data-testid="stAlert"] {
     background-color: rgba(239, 246, 255, 0.9) !important;
-    /* Убираем жесткую рамку */
+    /* Прячем рамку и закругляем углы */
     border: none !important; 
-    /* Закругляем углы, как у карточек */
     border-radius: 12px !important; 
-    /* Добавляем легкую тень для объема */
     box-shadow: 0 2px 8px rgba(0,0,0,0.05) !important; 
 }
 
-/* --- Поля ввода --- */
+/* Поля ввода */
 .stTextInput > div > div > input,
 .stTextArea > div > div > textarea,
 .stSelectbox > div > div > div {
