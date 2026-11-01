@@ -2,7 +2,7 @@
 [data-testid="stAppViewContainer"] {
     /* Накладываем белый градиент чтобы картинка не мешала читать текст */
     background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), 
-                      url('https://s6.iimage.su/s/01/umlkgVHxfLIYZIhCwQkryjr9PAyFZk55DLbL6rzCH.png') !important;
+                      url('https://s6.iimage.su/s/01/uEYprgwxIQ531v2y903gUeQSdospe1oQmtjsCFWKE.png') !important;
     background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
